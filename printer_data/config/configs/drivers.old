@@ -1,0 +1,272 @@
+##########################################
+### drivers.cfg
+##########################################
+[stepper_x]
+#	Driver 3
+step_pin: PE14
+dir_pin: !PE8
+enable_pin: !PE9
+rotation_distance: 40
+microsteps: 16
+full_steps_per_rotation: 200  
+endstop_pin:^sht:LIMIT_1
+position_endstop: 0
+position_min: 0
+position_max: 420
+homing_speed: 50 
+homing_retract_dist: 5
+
+[tmc5160 stepper_x] 
+#spi_bus: spi3
+cs_pin: PE7
+#diag_pin: PA8
+sense_resistor: 0.022
+interpolate: True
+run_current: 1.8
+hold_current: 0.9
+spi_software_mosi_pin: PB5
+spi_software_miso_pin: PB4
+spi_software_sclk_pin: PB3
+driver_IHOLDDELAY: 10
+driver_TPOWERDOWN: 128
+driver_TBL: 1
+driver_TOFF: 3
+driver_HEND: 2
+driver_HSTRT: 4
+driver_FD3: 0
+driver_TPFD: 0
+driver_CHM: 0
+driver_VHIGHFS: 0
+driver_VHIGHCHM: 0
+driver_DISS2G: 0
+driver_DISS2VS: 0
+driver_PWM_AUTOSCALE: True
+driver_PWM_AUTOGRAD: True
+driver_PWM_FREQ: 1
+driver_FREEWHEEL: 0
+driver_PWM_GRAD: 14
+driver_PWM_OFS: 36
+driver_PWM_REG: 8
+driver_PWM_LIM: 12
+driver_SGT: 0
+driver_SEMIN: 0
+driver_SEUP: 0
+driver_SEMAX: 0
+driver_SEDN: 0
+driver_SEIMIN: 0
+driver_SFILT: 0
+
+
+[stepper_x1]
+#	Driver 5
+step_pin: PE1
+dir_pin: !PF0
+enable_pin: !PC15
+rotation_distance: 40
+microsteps: 16
+full_steps_per_rotation: 200
+#endstop_pin: tmc5160_stepper_x:virtual_endstop 
+
+[tmc5160 stepper_x1] 
+#spi_bus: spi3
+cs_pin: PF1
+#diag_pin: PD6
+sense_resistor: 0.022
+interpolate: True
+run_current: 1.8
+hold_current: 0.9
+spi_software_mosi_pin: PB5
+spi_software_miso_pin: PB4
+spi_software_sclk_pin: PB3
+driver_IHOLDDELAY: 10
+driver_TPOWERDOWN: 128
+driver_TBL: 1
+driver_TOFF: 3
+driver_HEND: 2
+driver_HSTRT: 4
+driver_FD3: 0
+driver_TPFD: 0
+driver_CHM: 0
+driver_VHIGHFS: 0
+driver_VHIGHCHM: 0
+driver_DISS2G: 0
+driver_DISS2VS: 0
+driver_PWM_AUTOSCALE: True
+driver_PWM_AUTOGRAD: True
+driver_PWM_FREQ: 1
+driver_FREEWHEEL: 0
+driver_PWM_GRAD: 14
+driver_PWM_OFS: 36
+driver_PWM_REG: 8
+driver_PWM_LIM: 12
+driver_SGT: 0
+driver_SEMIN: 0
+driver_SEUP: 0
+driver_SEMAX: 0
+driver_SEDN: 0
+driver_SEIMIN: 0
+driver_SFILT: 0
+
+
+[stepper_y]
+#	Driver 4
+step_pin: PE15
+dir_pin: !PE11
+enable_pin: !PF2
+rotation_distance: 40
+microsteps: 16
+full_steps_per_rotation: 200  
+endstop_pin: PG11                 #make sure to set the correct pin here.
+position_endstop: 0
+position_min: 0
+position_max: 400
+homing_speed: 50  
+homing_retract_dist: 5
+
+[tmc5160 stepper_y] 
+#spi_bus: spi3
+cs_pin: PE10
+#diag_pin: PD7
+sense_resistor: 0.022
+interpolate: True
+run_current: 1.8
+hold_current: 0.9
+spi_software_mosi_pin: PB5
+spi_software_miso_pin: PB4
+spi_software_sclk_pin: PB3
+driver_IHOLDDELAY: 10
+driver_TPOWERDOWN: 128
+driver_TBL: 1
+driver_TOFF: 3
+driver_HEND: 2
+driver_HSTRT: 4
+driver_FD3: 0
+driver_TPFD: 0
+driver_CHM: 0
+driver_VHIGHFS: 0
+driver_VHIGHCHM: 0
+driver_DISS2G: 0
+driver_DISS2VS: 0
+driver_PWM_AUTOSCALE: True
+driver_PWM_AUTOGRAD: True
+driver_PWM_FREQ: 1
+driver_FREEWHEEL: 0
+driver_PWM_GRAD: 14
+driver_PWM_OFS: 36
+driver_PWM_REG: 8
+driver_PWM_LIM: 12
+driver_SGT: 0
+driver_SEMIN: 0
+driver_SEUP: 0
+driver_SEMAX: 0
+driver_SEDN: 0
+driver_SEIMIN: 0
+driver_SFILT: 0
+
+[stepper_y1]
+#	Driver 6
+step_pin: PE0
+dir_pin: !PG3
+enable_pin: !PG4
+rotation_distance: 40
+microsteps: 16
+full_steps_per_rotation: 200
+#endstop_pin: tmc5160_stepper_y:virtual_endstop  
+
+[tmc5160 stepper_y1] 
+#spi_bus: spi3
+cs_pin: PG2
+#diag_pin: PG9
+sense_resistor: 0.022
+interpolate: True
+run_current: 1.8
+hold_current: 0.9
+spi_software_mosi_pin: PB5
+spi_software_miso_pin: PB4
+spi_software_sclk_pin: PB3
+driver_IHOLDDELAY: 10
+driver_TPOWERDOWN: 128
+driver_TBL: 1
+driver_TOFF: 3
+driver_HEND: 2
+driver_HSTRT: 4
+driver_FD3: 0
+driver_TPFD: 0
+driver_CHM: 0
+driver_VHIGHFS: 0
+driver_VHIGHCHM: 0
+driver_DISS2G: 0
+driver_DISS2VS: 0
+driver_PWM_AUTOSCALE: True
+driver_PWM_AUTOGRAD: True
+driver_PWM_FREQ: 1
+driver_FREEWHEEL: 0
+driver_PWM_GRAD: 14
+driver_PWM_OFS: 36
+driver_PWM_REG: 8
+driver_PWM_LIM: 12
+driver_SGT: 0
+driver_SEMIN: 0
+driver_SEUP: 0
+driver_SEMAX: 0
+driver_SEDN: 0
+driver_SEIMIN: 0
+driver_SFILT: 0
+
+#########################
+
+[stepper_z]
+#	Driver 0
+step_pin: PE2
+dir_pin: !PC5
+enable_pin: !PF11
+microsteps: 16
+rotation_distance: 2
+endstop_pin: probe:z_virtual_endstop # use beacon as virtual endstop
+homing_retract_dist: 0 # beacon needs this to be set to 0
+#position_endstop: 0.0
+position_max: 400
+position_min: -1.5
+full_steps_per_rotation: 200
+homing_positive_dir: false
+homing_speed: 10.0
+second_homing_speed: 2.5
+
+[tmc2209 stepper_z]
+interpolate: false
+uart_pin: PC4
+run_current: 1.2
+hold_current: 0.4
+stealthchop_threshold: 0
+
+[stepper_z1]
+#	Driver 1
+step_pin: PE3
+dir_pin: PF13
+enable_pin: !PF14
+microsteps: 16
+rotation_distance: 2
+full_steps_per_rotation: 200
+
+[tmc2209 stepper_z1]
+interpolate: false
+uart_pin: PF12
+run_current: 1.2
+hold_current: 0.4
+stealthchop_threshold: 0
+
+[stepper_z2]
+#	Driver 2
+step_pin: PE4
+dir_pin: PG0
+enable_pin: !PG1
+microsteps: 32
+rotation_distance: 2
+full_steps_per_rotation: 200
+
+[tmc2209 stepper_z2]
+interpolate: false
+uart_pin: PF15
+run_current: 1.2
+hold_current: 0.4
+stealthchop_threshold: 0
